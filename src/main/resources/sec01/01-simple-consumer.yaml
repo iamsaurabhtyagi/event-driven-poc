@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    function:
+      definition: consumerEvent
+    stream:
+      bindings:
+        consumerEvent-in-0:
+          destination: demo-events

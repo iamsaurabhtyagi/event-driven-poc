@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    function:
+      definition: producerEvent
+    stream:
+      bindings:
+        producerEvent-out-0:
+          destination: demo-events

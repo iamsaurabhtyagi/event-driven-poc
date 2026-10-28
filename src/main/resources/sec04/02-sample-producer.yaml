@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    function:
+      definition: producerEvent
+    stream:
+      bindings:
+        producerEvent-out-0:
+          destination: demo-events
+          group: demo-group
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false

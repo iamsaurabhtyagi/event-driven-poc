@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    function:
+      definition: consumerEvent
+    stream:
+      bindings:
+        consumerEvent-in-0:
+          destination: demo-events
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          consumer-properties:
+            auto.offset.reset: earliest # --from-beginning
