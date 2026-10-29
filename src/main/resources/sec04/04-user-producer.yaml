@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    function:
+      definition: userMessageSupplierEvent
+    stream:
+      bindings:
+        userMessageSupplierEvent-out-0:
+          destination: demo-events
+          group: demo-group
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false
+          producer-properties:
+            key.serializer: org.apache.kafka.common.serialization.StringSerializer
