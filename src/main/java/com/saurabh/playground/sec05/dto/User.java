@@ -1,4 +1,4 @@
-package com.saurabh.playground.sec04.dto;
+package com.saurabh.playground.sec05.dto;
 
 public class User {
     private String id;

@@ -1,6 +1,5 @@
-package com.saurabh.playground.sec04;
+package com.saurabh.playground.sec05;
 
-import com.saurabh.playground.sec03.Section03Runner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

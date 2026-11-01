@@ -1,6 +1,6 @@
-package com.saurabh.playground.sec04.consumer;
+package com.saurabh.playground.sec05.consumer;
 
-import com.saurabh.playground.sec04.dto.User;
+import com.saurabh.playground.sec05.dto.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
