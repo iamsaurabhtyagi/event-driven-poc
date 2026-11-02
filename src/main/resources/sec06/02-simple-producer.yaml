@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    function:
+      definition: producerEvent
+    stream:
+      poller:
+        fixed-delay: 5000
+      bindings:
+        producerEvent-out-0:
+          destination: demo-events
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false
