@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    function:
+      definition: physicalDeliveryConsumer
+    stream:
+      bindings:
+        physicalDeliveryConsumer-in-0:
+          destination: physical-delivery
+          group: physical-delivery-service
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false
+          consumer-properties:
+            auto.offset.reset: earliest
