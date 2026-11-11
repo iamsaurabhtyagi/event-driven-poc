@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    function:
+      definition: producerEvent
+    stream:
+      poller:
+        fixed-delay: 2000
+      bindings:
+        producerEvent-out-0:
+          destination: demo-event
+      kafka:
+        binder:
+          brokers:
+            - localhost:8081
+          autoCreateTopics: false
+          producer-properties:
+            key.serializer: org.apache.kafka.common.serialization.StringSerializer

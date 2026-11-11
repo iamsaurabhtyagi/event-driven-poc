@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    function:
+      definition: consumerEvent
+    stream:
+      bindings:
+        consumerEvent-in-0:
+          destination: demo-event
+          group: demo-group
+      kafka:
+        binder:
+          brokers:
+            - localhost:8081
+          autoCreateTopics: false
+          consumer-properties:
+            auto.offset.reset: earliest
+            key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
