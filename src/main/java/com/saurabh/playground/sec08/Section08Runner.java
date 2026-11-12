@@ -3,6 +3,9 @@ package com.saurabh.playground.sec08;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Kafka testing with Producer, Processor and Consumer to test Event Routing (content based and dynamic)
+ */
 public class Section08Runner {
 
     @SpringBootApplication(scanBasePackages = "com.saurabh.playground.${section}.consumer")

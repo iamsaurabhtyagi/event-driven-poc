@@ -3,6 +3,9 @@ package com.saurabh.playground.sec06;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Kafka testing with multiple consumer and multiple partitions in topic
+ */
 public class Section06Runner {
 
     @SpringBootApplication(scanBasePackages = "com.saurabh.playground.${section}.consumer")

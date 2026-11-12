@@ -3,6 +3,9 @@ package com.saurabh.playground.sec04;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Test Kafka with StreamBridge to produce event.
+ */
 public class Section04Runner {
 
     @SpringBootApplication(scanBasePackages = "com.saurabh.playground.${section}.consumer")

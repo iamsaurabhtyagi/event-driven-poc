@@ -3,6 +3,9 @@ package com.saurabh.playground.sec09;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Testing with Kafka cluster
+ */
 public class Section09Runner {
 
     @SpringBootApplication(scanBasePackages = "com.saurabh.playground.${section}.consumer")

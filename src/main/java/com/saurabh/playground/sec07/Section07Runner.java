@@ -3,6 +3,11 @@ package com.saurabh.playground.sec07;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Kafka testing with Processor who is actually both consumer and producer
+ * other producer produce event and Processor receive that event and produce
+ * another event of another consumer
+ */
 public class Section07Runner {
 
     @SpringBootApplication(scanBasePackages = "com.saurabh.playground.${section}.consumer")

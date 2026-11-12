@@ -3,6 +3,9 @@ package com.saurabh.playground.sec05;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Kafka testing with custom User object to send in message
+ */
 public class Section05Runner {
 
 	@SpringBootApplication(scanBasePackages = "com.saurabh.playground.${section}.consumer")

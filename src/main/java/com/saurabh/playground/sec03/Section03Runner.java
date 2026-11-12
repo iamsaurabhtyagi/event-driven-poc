@@ -3,6 +3,9 @@ package com.saurabh.playground.sec03;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Kafka consumer and producer testing with Key to achieve message/event order
+ */
 public class Section03Runner {
 
 	@SpringBootApplication(scanBasePackages = "com.saurabh.playground.sec03.consumer")

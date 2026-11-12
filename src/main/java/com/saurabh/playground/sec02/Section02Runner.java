@@ -3,6 +3,9 @@ package com.saurabh.playground.sec02;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Testing Kafka with producer
+ */
 @SpringBootApplication
 public class Section02Runner {
 

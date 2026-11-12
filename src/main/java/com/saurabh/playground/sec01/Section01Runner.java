@@ -3,6 +3,9 @@ package com.saurabh.playground.sec01;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Testing consumer with single consumer and consumer group
+ */
 @SpringBootApplication
 public class Section01Runner {
 
