@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        demo-out:
+          destination: demo-topic
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false
+          producer-properties:
+            linger.ms: 10
+            batch.size: 32768 # 32 KB
