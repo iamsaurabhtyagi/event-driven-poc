@@ -8,7 +8,7 @@ spring:
           destination: demo-topic
           group: demo-group
           consumer:
-            concurrent: 3
+            concurrency: 3
       kafka:
         binder:
           brokers:
