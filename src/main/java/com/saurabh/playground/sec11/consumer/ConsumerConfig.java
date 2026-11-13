@@ -12,7 +12,7 @@ public class ConsumerConfig {
     Logger log = LoggerFactory.getLogger(ConsumerConfig.class);
 
     @Bean
-    public Consumer<String> consumerConfig() {
+    public Consumer<String> messageConsumer() {
         return msg -> {
             log.info("Received Message: {}", msg);
         };

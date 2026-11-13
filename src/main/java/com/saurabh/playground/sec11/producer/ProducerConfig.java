@@ -13,7 +13,7 @@ public class ProducerConfig {
     Logger log = LoggerFactory.getLogger(ProducerConfig.class);
 
     @Bean
-    public Supplier<String> producerConfig() {
+    public Supplier<String> messageProducer() {
         var counter = new AtomicInteger(0);
         return () -> {
             var msg = "msg-"+counter.incrementAndGet();

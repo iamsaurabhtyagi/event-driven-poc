@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    function:
+      definition: messageProducer
+    stream:
+      bindings:
+        messageProducer-out-0:
+          destination: demo-topic
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false

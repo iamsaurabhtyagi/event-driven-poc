@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    function:
+      definition: messageConsumer
+    stream:
+      bindings:
+        messageConsumer-in-0:
+          destination: demo-topic
+          group: demo-group
+          consumer:
+            concurrent: 3
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false
+          consumer-properties:
+            auto.offset.reset: earliest
