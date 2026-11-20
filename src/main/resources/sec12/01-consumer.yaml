@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    function:
+      definition: messageConsumer
+    stream:
+      bindings:
+        messageConsumer-in-0:
+          destination: demo-event
+          group: demo-group
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          autoCreateTopics: false
+        consumer-properties:
+          auto.offset.reset: earliest
+        bindings:
+          messageConsumer-in-0:
+            consumer:
+              ack-mode: MANUAL
