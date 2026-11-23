@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      bindings:
+        consumer-in-0:
+          destination: demo-topic
+          group: demo-group
+          consumer:
+            max-attempts: 3                     # retry delivery attempts
+            back-off-initial-interval: 2000     # wait time before first retry (ms)
+            back-off-multiplier: 2.0            # retry delay grow exponentially
+            back-off-max-interval: 10000        # upper bound for retry delay (ms)
+            default-retryable: false            # disable default retry configuration, by default it retry all exceptions because default-retryable: true
+            retryable-exceptions:               # Decide in which exception we should retry or do not retry
+              com.saurabh.playground.sec13.exceptions.InputValidationException: false     # do not retry
+              com.saurabh.playground.sec13.exceptions.ServiceUnavailableException: true   # retry
+      kafka:
+        bindings:
+          consumer-in-0:
+            consumer:
+              enable-dlq: true
+              dlq-name: demo-topic-dlq
+        binder:
+          brokers:
+            - localhost:9092
+          consumer-properties:
+            auto.offset.reset: earliest
